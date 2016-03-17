@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: white;
+}
+
+#content {
+  width: 625px;
+  margin: auto auto;
+  overflow: hidden;
+}
+
+#banner {
+  text-align: center;
+  font-size: 7px;
+  font-weight: bold;
+  line-height: 4px;
+  margin-top: -10px;
+  transform: scale(0.85, 1.0);
+}
+
+#header {
+  font-family: 'UnifrakturCook', cursive;
+  text-align: center;
+  font-size: 34px;
+  color: #444;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  margin-top: -22px;
+  z-index: 10;
+  position: relative;
+  background: white;
+  /*box-shadow: inset 0 0 2px rgba(0,0,0,0.1);*/
+  width: 120%;
+  margin-left: -10%;
+}
+
+.c-234-255-20 {
+  border: 1px solid;
+  box-shadow: 0 0 10px rgba(255,0,0,0.1);
+}
