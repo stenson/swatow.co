@@ -33,7 +33,7 @@
 
 (defn to-html [image-name scale phrase-string]
   (do
-    (reset! phrase (string/join "" (repeat 1000 phrase-string)))
+    (reset! phrase (string/join "" (repeat 10000 phrase-string)))
     (reset! pos 0)
     (let [image (-> (img/load-image image-name)
                     (img/scale scale))

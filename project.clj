@@ -11,4 +11,6 @@
                  [me.raynes/fs "1.4.6"]
                  [hieronymus "0.1.9-SNAPSHOT"]
                  [net.mikera/imagez "0.10.0"]
-                 [garden "1.3.0-SNAPSHOT"]])
+                 [garden "1.3.0-SNAPSHOT"]
+                 [me.raynes/cegdown "0.1.1"]
+                 [hiccup-bridge "1.0.1"]])

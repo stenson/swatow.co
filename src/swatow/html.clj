@@ -4,7 +4,7 @@
             [me.raynes.fs :as fs]))
 
 (defn favicon [size]
-  [:link {:href  (format "favicon-%sx%s.png" size size)
+  [:link {:href  (format "/favicon-%sx%s.png" size size)
           :sizes (format "%sx%s" size size)
           :rel   "icon"
           :type  "image/png"}])
@@ -12,7 +12,7 @@
 (defn now []
   (quot (System/currentTimeMillis) 1000))
 
-(defn favicons [& sizes]
+(defn make-favicons [& sizes]
   (->> (map favicon sizes)
        (conj [:link {:href "favicon.ico" :rel "icon" :type "image/x-icon"}])))
 
@@ -32,7 +32,7 @@
 (defn inline-js [src]
   [:script {:type "text/javascript"} src])
 
-(defn basic [title {:keys [styles scripts favicons]} content]
+(defn basic [title {:keys [styles scripts favicons head]} content]
   (html5
     {:lang "en"}
     (list
@@ -40,7 +40,7 @@
        [:meta {:charset "utf-8"}]
        [:title title]
        (when favicons
-         (list (favicons 16 32 96)))
+         (list (make-favicons 16 32 96)))
        (if (string? styles)
          (format [:style {:type "text/css"} styles])
          (list (map style-link styles)))]

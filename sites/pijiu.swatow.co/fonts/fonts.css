@@ -1,0 +1,36 @@
+
+@font-face {
+  font-family: 'FoundersGroteskWeb';
+  src: url('/fonts/FoundersGroteskWeb-Semibold.eot');
+  src: url('/fonts/FoundersGroteskWeb-Semibold.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/FoundersGroteskWeb-Semibold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PitchWeb';
+  src: url('/fonts/PitchWeb-RegularItalic.eot');
+  src: url('/fonts/PitchWeb-RegularItalic.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/PitchWeb-RegularItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'TiemposTextWeb';
+  src: url('/fonts/TiemposTextWeb-Regular.eot');
+  src: url('/fonts/TiemposTextWeb-Regular.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/TiemposTextWeb-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TiemposTextWeb';
+  src: url('/fonts/TiemposTextWeb-RegularItalic.eot');
+  src: url('/fonts/TiemposTextWeb-RegularItalic.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/TiemposTextWeb-RegularItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
