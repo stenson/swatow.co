@@ -6,7 +6,7 @@
 
 (defn page [slug title subheader banner html]
   (html/refresh
-    (str "pijiu.swatow.co" slug)
+    (str "lager.robstenson.com" slug)
     (str title (if title " — ") "League of Lagers")
     {:favicons true
      :scripts ["/hyphenator"]
@@ -38,15 +38,33 @@
   "Histories of the beers of the world"
   (:art posts/intro)
   (list
-    [:ol#toc {:start "0"}
-     [:li [:a {:href "/introduction"} "Introduction"]]
-     [:li [:span "Gambrinus, Emperor of Mexico"]]
-     [:li [:span "The Many Owners of Tsingtao"]]
-     [:li [:span "A Beer Named for its Brewer’s Death"]]
-     [:li [:span "Orion’s Three Stars"]]
-     [:li [:span "Skøl & the End of Beer"]]]
+    [:div#toc
+     (->> [posts/intro
+           posts/victoria
+           posts/tsingtao
+           posts/tusker
+           posts/orion
+           posts/skøl]
+          (map-indexed
+            (fn [idx {:keys [title blurb slug]}]
+              [:div.chapter
+               [:div.num idx]
+               (if slug
+                 [:a {:href slug} title]
+                 [:span title])
+               (when blurb
+                 [:div.blurb blurb])])))]
     [:div.nb
-     [:em "Unlinked posts are still being written..."]]))
+     [:em "Unlinked posts are still being written. To be notified of posts as they become available, simply"]
+     [:form#subscribe
+      {:action "https://tinyletter.com/lager"
+       :method "post"
+       :target "popupwindow"
+       :onsubmit "window.open('https://tinyletter.com/lager', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"}
+      [:p [:label {:for "tlemail"} "Enter your email address"]]
+      [:p [:input#tlemail {:type "text", :style "width:140px", :name "email"}]]
+      [:input {:type "hidden", :value "1", :name "embed"}]
+      [:input {:type "submit", :value "Subscribe"}]]]))
 (page
   "/introduction"
   "Introduction"

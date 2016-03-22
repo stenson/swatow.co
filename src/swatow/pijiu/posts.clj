@@ -3,11 +3,13 @@
 
 (def intro
   {:title "Introduction"
+   :slug "/introduction"
    :gid "164HC84UJTMs-SYh-69qyV2pqXCcebnHLb2o1dq8DXBU"
    :art (ascii/to-html
           "assets/images/map.png"
           0.125
           "LEAGUEOFLAGERS")
+   :blurb "A few words on why"
    :html [:div.post
           [:p "“I’m a big fan of international lagers.”"]
           [:p
@@ -51,3 +53,24 @@
            "Since then I’ve found a pastime in stitching together small lager histories, and found that recent world history seems to have written itself in the "
            [:a {:href "https://www.youtube.com/watch?v=fAFZnZG_waI"} "bubbles of those beers"]
            "."]]})
+
+(def victoria
+  {:title "Gambrinus, Emperor of Mexico"
+   :blurb (list "The enormous sound of Mexican brass, and the Viennese quality of "
+                [:strong "Victoria"])})
+
+(def tsingtao
+  {:title '("The Many Owners of " [:strong "Tsingtao"])
+   :blurb (list "Germans, Japanese, Communists, & Capitalists")})
+
+(def tusker
+  {:title "A Beer Named for its Brewer’s Death"
+   :blurb (list "Kenya’s " [:strong "Tusker"] ", the elephant murder, and Zion")})
+
+(def orion
+  {:title (list [:strong "Orion"] "’s Three Stars")
+   :blurb "When the United States military ruled Okinawa, and controlled its beer"})
+
+(def skøl
+  {:title (list [:strong "Skøl"] " & the End of Beer")
+   :blurb "Marketers decide to make a true ‘international lager’"})
